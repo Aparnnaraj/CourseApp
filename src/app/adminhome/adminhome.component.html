@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+      <div class="col">
+      <!--<img [src]="image" alt="" style="width:200px;height:200px">-->
+    </div>
+    <div class="col" style="color:brown">
+      <br><br>
+      <h2>Hello Admin</h2>
+    </div>
+
+  
+   
+    </div>
+    <div class="row">
+
+      <div class="col" style="background-color:beige">
+
+        <br><br><br><br>
+        <a routerLink="Regusers">Registered Students</a><br><br>
+        <a routerLink="course">Adding courseCategory</a><br><br>
+        <a routerLink="categorylist">courseCategory</a><br><br>
+        <a routerLink="adminaddedcourses">Courses</a><br><br>
+        <a routerLink="adminaddedcourselist">CoursesAvailable</a>
+       
+       
+      </div>
+     
+      <div class="col">
+        <router-outlet></router-outlet>
+      </div>
+      <!-- <div class="col">
+       
+       
+      </div> -->
+    </div>
+  </div>

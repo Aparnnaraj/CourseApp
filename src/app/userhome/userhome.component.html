@@ -1,0 +1,130 @@
+<div class="container">
+    <div class="row">
+  
+      
+      <div class="col" >
+        
+  
+        <div class="col" style="width:300px;">
+          <h3>Which course you want to enroll??</h3>
+           <div class="card"
+             *ngIf = 'books && books.length'>
+             <div class="card-body" *ngFor='let book of books'>
+               <div class="row">
+               <div class="col">
+              {{book.category}}
+             </div> 
+             <div class="col">
+               <button class="btn btn-light" type="submit" style="cursor:pointer" (click)="display(book)"  style="margin-left: 20px;">
+               <div class="spinner-grow" role="status">
+               <span class="visually-hidden">Loading...</span>
+             </div>
+               </button>
+         </div>
+             </div>
+           </div>
+         </div>
+     
+     
+     
+         </div>
+           
+  
+      </div>
+      <div class="col"style="width: 700px;">
+  
+        <br>
+        <br>
+       <h3> Available Courses</h3>
+  
+        <!-- <div class='card' style="background-color: beige;">
+          <div class='card-header'>
+           
+          </div>
+          
+          <div class='card-body'>            
+            <div class='table-responsive'>
+              <table class='table'
+                    *ngIf = 'fooddatas && fooddatas.length'>
+                <thead>
+                  <tr>
+                    <th>
+                      <button class='btn btn-primary'
+                      (click)='toggleImage()'>
+                        {{showImage? 'Hide' : 'Show'}} Image
+                      </button>
+                    </th>
+                    <th>Food</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>rating</th>
+                  </tr>
+                 
+                </thead>
+                <tbody>  
+                    <tr *ngFor='let f of fooddatas'>
+                        <td><img *ngIf='showImage'
+                          [src] = 'f.imageurl' 
+                          [title] = 'f.food'
+                          [style.width.px] = 'imageWidth' 
+                          [style.margin.px] = 'imageMargin'></td>
+                        <td>{{ f.food }}</td>
+                        <td>{{ f.category }}</td>
+                        <td>{{ f.description }}</td>
+                        <td>{{ f.rate}}</td>
+                        <td>{{ f.rating }}</td>
+                        
+                      </tr>              
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+         -->
+  
+         <div class="card" style="width: 18rem;"  *ngIf = 'coursedatas && coursedatas.length'>
+          
+          <div class="card-body"*ngFor='let f of coursedatas'>
+          <!--  <img src="f.imageurl" class="card-img-top" alt="picture of {{f.course}}">-->
+            <h5 class="card-title">{{f.course}}</h5>
+            <p class="card-text">It is {{ f.category }} course.It is a {{ f.description }} type of industy relevant skills.This course is mentored by{{ f.faculty}} rupees</p>
+            In rating it has {{ f.rating }}/10 provided our peer students.
+          </div>
+        </div>
+  
+  
+  
+  
+  
+      </div>
+  
+     
+      
+      
+     
+     
+    </div>
+  
+  
+      <div class="row">
+        <h3 style="text-align:center;">Add Course and skills</h3>
+  
+        <div class="col" style="background-color:beige;height:450px;width:10px">
+  
+        <br><br><br><br>
+        
+        <a routerLink="useraddcategory">Adding courseCategory</a><br><br>
+        <a routerLink="usercatlist">courseCategory</a><br><br>
+        <a routerLink="useraddedcourse">Coursess</a><br><br>
+        <a routerLink="useraddedcourselist">CoursessAvailable</a>
+       
+       
+      </div>
+        
+        <div class="col">
+          <router-outlet></router-outlet>
+        </div>
+        
+      </div>
+    </div>

@@ -1,0 +1,51 @@
+<div class='card'>
+    <form (ngSubmit)="editProduct()">
+<div class='card-header'>
+ ADD COURSES
+</div>
+<div class='card-body'>            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+      <tbody>  
+         
+            <tr>
+                <td><label>Course Name</label></td>
+                <td><input type="text" name="p_name" [(ngModel)]="productItem.course"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Course Skills</label></td>
+                <td>
+                    <select   required [(ngModel)]="productItem.category" name="qualification" #qual="ngModel" class="form-control form-control-lg"
+                    placeholder="Qualification" >
+                   <option *ngFor="let cat of cats" [value]="cat.category">{{cat.category}}</option>
+          </select>
+                </td>                  
+              </tr>  
+             
+              <tr>
+                <td><label> Description</label></td>
+                <td><input type="text" name="p_desc" [(ngModel)]="productItem.description"/></td>                  
+              </tr>  
+              <tr>
+                <td> <label> Faculty</label></td>
+                <td><input type="text" name="p_price" [(ngModel)]="productItem.faculty"/></td>                  
+              </tr>  
+              <tr>
+                <td> <label> starRating</label></td>
+                <td><input type="text" name="p_rating" [(ngModel)]="productItem.rating"/></td>                  
+              </tr>  
+             <!-- <tr>
+                <td><label>Product imageUrl</label></td>
+                <td><input type="text" name="p_image" [(ngModel)]="productItem.imageurl"/></td>                  
+              </tr>-->  
+              <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>                  
+              </tr>             
+      </tbody>
+    </table>
+  </div>
+</div>
+</form>
+</div>
