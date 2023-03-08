@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AuthGuard } from './auth.guard';
 import { Router } from '@angular/router';
 import {HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-//import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddcoursesComponent } from './addcourses/addcourses.component';
@@ -65,7 +66,7 @@ import { LoginService } from './login.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-//NgbModule
+    NgbModule,
     FormsModule,
     HttpClientModule,
 
